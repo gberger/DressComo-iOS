@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let url = "http://localhost:3000/api/posts.json"
+        
+        let manager = Manager.sharedInstance
+        
+        manager.session.configuration.HTTPAdditionalHeaders = [
+            "Content-Type": "application/json",
+            "User-Agent": "DressComo-iOS/beta",
+            "X-User-Token": "rPwfMF-2tMxyWJVsNr_T",
+            "X-User-Email": "gberger@unc.edu"
+        ]
+        
+        manager.request(.GET, url)
+            .responseJSON { (request, response, data, error) in
+                println(data)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
