@@ -15,6 +15,9 @@
 		924AFE141ABE14CD00A4E001 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924AFE121ABE14CD00A4E001 /* LaunchScreen.xib */; };
 		924AFE201ABE14CE00A4E001 /* DressComoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFE1F1ABE14CE00A4E001 /* DressComoTests.swift */; };
 		D62CD7A7349CC53A0AB2A9EF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABCE8571DEBD39AB49D5C4E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ED3C09D51ACFD86A00778E68 /* Haneke.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED3C09CD1ACFD83E00778E68 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED3C09D71ACFE21D00778E68 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */; };
+		ED3C09D91ACFE2EB00778E68 /* DressComoPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +28,48 @@
 			remoteGlobalIDString = 924AFE011ABE14CD00A4E001;
 			remoteInfo = DressComo;
 		};
+		ED3C09CC1ACFD83E00778E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9561980418C00CD0F4C;
+			remoteInfo = Haneke;
+		};
+		ED3C09CE1ACFD83E00778E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9611980418C00CD0F4C;
+			remoteInfo = HanekeTests;
+		};
+		ED3C09D01ACFD83E00778E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0026E9A19C9BFBC004DE0C6;
+			remoteInfo = HanekeDemo;
+		};
+		ED3C09D21ACFD84900778E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A095C9551980418C00CD0F4C;
+			remoteInfo = Haneke;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED3C09D41ACFD85400778E68 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED3C09D51ACFD86A00778E68 /* Haneke.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2ABCE8571DEBD39AB49D5C4E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +87,9 @@
 		924AFE1E1ABE14CE00A4E001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924AFE1F1ABE14CE00A4E001 /* DressComoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressComoTests.swift; sourceTree = "<group>"; };
 		92ABD7FE1ABE1DD400892A92 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = Pods/../../HanekeSwift/Haneke.xcodeproj; sourceTree = "<group>"; };
+		ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressComoPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +123,7 @@
 		924AFDF91ABE14CD00A4E001 = {
 			isa = PBXGroup;
 			children = (
+				ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */,
 				924AFE041ABE14CD00A4E001 /* DressComo */,
 				924AFE1C1ABE14CE00A4E001 /* DressComoTests */,
 				924AFE031ABE14CD00A4E001 /* Products */,
@@ -104,6 +152,8 @@
 				924AFE121ABE14CD00A4E001 /* LaunchScreen.xib */,
 				924AFE051ABE14CD00A4E001 /* Supporting Files */,
 				92ABD7FE1ABE1DD400892A92 /* Bridge.h */,
+				ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */,
+				ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */,
 			);
 			path = DressComo;
 			sourceTree = "<group>";
@@ -141,6 +191,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED3C09C71ACFD83E00778E68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED3C09CD1ACFD83E00778E68 /* Haneke.framework */,
+				ED3C09CF1ACFD83E00778E68 /* HanekeTests.xctest */,
+				ED3C09D11ACFD83E00778E68 /* HanekeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,10 +214,12 @@
 				924AFE001ABE14CD00A4E001 /* Resources */,
 				4A2A2FAB494A3E1FAF48AE8E /* Copy Pods Resources */,
 				27DBC47527EB9DD58F46B7CD /* Embed Pods Frameworks */,
+				ED3C09D41ACFD85400778E68 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ED3C09D31ACFD84900778E68 /* PBXTargetDependency */,
 			);
 			name = DressComo;
 			productName = DressComo;
@@ -211,6 +273,12 @@
 			mainGroup = 924AFDF91ABE14CD00A4E001;
 			productRefGroup = 924AFE031ABE14CD00A4E001 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ED3C09C71ACFD83E00778E68 /* Products */;
+					ProjectRef = ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				924AFE011ABE14CD00A4E001 /* DressComo */,
@@ -218,6 +286,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ED3C09CD1ACFD83E00778E68 /* Haneke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Haneke.framework;
+			remoteRef = ED3C09CC1ACFD83E00778E68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED3C09CF1ACFD83E00778E68 /* HanekeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HanekeTests.xctest;
+			remoteRef = ED3C09CE1ACFD83E00778E68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED3C09D11ACFD83E00778E68 /* HanekeDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HanekeDemo.app;
+			remoteRef = ED3C09D01ACFD83E00778E68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		924AFE001ABE14CD00A4E001 /* Resources */ = {
@@ -293,8 +385,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				924AFE0C1ABE14CD00A4E001 /* SecondViewController.swift in Sources */,
+				ED3C09D91ACFE2EB00778E68 /* DressComoPost.swift in Sources */,
 				924AFE081ABE14CD00A4E001 /* AppDelegate.swift in Sources */,
 				924AFE0A1ABE14CD00A4E001 /* FirstViewController.swift in Sources */,
+				ED3C09D71ACFE21D00778E68 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +407,11 @@
 			isa = PBXTargetDependency;
 			target = 924AFE011ABE14CD00A4E001 /* DressComo */;
 			targetProxy = 924AFE1A1ABE14CE00A4E001 /* PBXContainerItemProxy */;
+		};
+		ED3C09D31ACFD84900778E68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Haneke;
+			targetProxy = ED3C09D21ACFD84900778E68 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

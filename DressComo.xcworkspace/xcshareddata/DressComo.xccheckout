@@ -12,6 +12,8 @@
 	<dict>
 		<key>AC800FD08DC78A467F49DB2B4EC449BE39855073</key>
 		<string>github.com:gberger/DressComo-iOS.git</string>
+		<key>C93564C1AFB8B50FF58188F21182F5D0EEAD1C3F</key>
+		<string>github.com:Haneke/HanekeSwift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DressComo.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>AC800FD08DC78A467F49DB2B4EC449BE39855073</key>
 		<string>..</string>
+		<key>C93564C1AFB8B50FF58188F21182F5D0EEAD1C3F</key>
+		<string>../../HanekeSwift</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:gberger/DressComo-iOS.git</string>
@@ -35,6 +39,14 @@
 			<string>AC800FD08DC78A467F49DB2B4EC449BE39855073</string>
 			<key>IDESourceControlWCCName</key>
 			<string>DressComo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C93564C1AFB8B50FF58188F21182F5D0EEAD1C3F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HanekeSwift</string>
 		</dict>
 	</array>
 </dict>
