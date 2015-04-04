@@ -1,20 +1,18 @@
 //
-//  FirstViewController.swift
+//  NewsFeedViewController.swift
 //  DressComo
 //
-//  Created by Guilherme Berger on 3/21/15.
+//  Created by Guilherme Berger on 4/4/15.
 //  Copyright (c) 2015 Guilherme Berger. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
 import Haneke
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet
-    var tableView: UITableView!
+class NewsFeedTableViewController: UITableViewController {
     
     var posts : [DressComoPost] = []
     
@@ -47,20 +45,20 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
                 self.tableView.reloadData()
         }
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.posts.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as PostTableViewCell
         
         cell.setPost(self.posts[indexPath.item])
@@ -68,10 +66,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-
-
+    
+    
 }
 

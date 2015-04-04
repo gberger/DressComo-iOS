@@ -13,6 +13,8 @@ public class DressComoPost {
     var text : String? = nil
     var cloudinary_image_id : String = ""
     var author : String? = nil
+    var likes : Int = 0
+    var dislikes : Int = 0
     
     func image_url () -> NSURL {
         return NSURL(string: "http://res.cloudinary.com/gberger/image/upload/\(self.cloudinary_image_id).jpg")!

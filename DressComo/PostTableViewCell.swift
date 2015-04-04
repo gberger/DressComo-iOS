@@ -23,8 +23,7 @@ public class PostTableViewCell : UITableViewCell {
         url = post.image_url()
         outfitImage!.hnk_setImageFromURL(url)
         descriptionLabel.text = post.text
-        
-        likeLabel.text = "0"
-        dislikeLabel.text = "0"
+        likeLabel.text = "\(post.likes)"
+        dislikeLabel.text = "\(post.dislikes)"
     }
 }
