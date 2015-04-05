@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Locksmith
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if User.sharedInstance.authenticated {
+            self.window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController
+        } else {
+            self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as? UIViewController
+        }
+        
         return true
     }
 

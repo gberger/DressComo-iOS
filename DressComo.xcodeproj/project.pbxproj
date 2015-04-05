@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		924AFE081ABE14CD00A4E001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFE071ABE14CD00A4E001 /* AppDelegate.swift */; };
-		924AFE0C1ABE14CD00A4E001 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFE0B1ABE14CD00A4E001 /* SecondViewController.swift */; };
+		924AFE0C1ABE14CD00A4E001 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFE0B1ABE14CD00A4E001 /* SettingsViewController.swift */; };
 		924AFE0F1ABE14CD00A4E001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924AFE0D1ABE14CD00A4E001 /* Main.storyboard */; };
 		924AFE111ABE14CD00A4E001 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924AFE101ABE14CD00A4E001 /* Images.xcassets */; };
 		924AFE141ABE14CD00A4E001 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924AFE121ABE14CD00A4E001 /* LaunchScreen.xib */; };
@@ -18,6 +18,8 @@
 		ED3C09D71ACFE21D00778E68 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */; };
 		ED3C09D91ACFE2EB00778E68 /* DressComoPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */; };
 		ED7E4A001AD00FEA0041B899 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */; };
+		EDC3FF711AD12EFB003E0631 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3FF701AD12EFB003E0631 /* User.swift */; };
+		EDC3FF771AD13695003E0631 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3FF761AD13695003E0631 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +80,7 @@
 		924AFE021ABE14CD00A4E001 /* DressComo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DressComo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924AFE061ABE14CD00A4E001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924AFE071ABE14CD00A4E001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		924AFE0B1ABE14CD00A4E001 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		924AFE0B1ABE14CD00A4E001 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		924AFE0E1ABE14CD00A4E001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		924AFE101ABE14CD00A4E001 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		924AFE131ABE14CD00A4E001 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 		ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressComoPost.swift; sourceTree = "<group>"; };
 		ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
+		EDC3FF701AD12EFB003E0631 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EDC3FF761AD13695003E0631 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +148,10 @@
 		924AFE041ABE14CD00A4E001 /* DressComo */ = {
 			isa = PBXGroup;
 			children = (
+				EDC3FF741AD1365F003E0631 /* Models */,
+				EDC3FF751AD13664003E0631 /* ViewControllers */,
 				924AFE071ABE14CD00A4E001 /* AppDelegate.swift */,
-				ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */,
-				ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */,
 				ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */,
-				924AFE0B1ABE14CD00A4E001 /* SecondViewController.swift */,
 				924AFE0D1ABE14CD00A4E001 /* Main.storyboard */,
 				924AFE101ABE14CD00A4E001 /* Images.xcassets */,
 				924AFE121ABE14CD00A4E001 /* LaunchScreen.xib */,
@@ -199,6 +202,25 @@
 				ED3C09D11ACFD83E00778E68 /* HanekeDemo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EDC3FF741AD1365F003E0631 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EDC3FF701AD12EFB003E0631 /* User.swift */,
+				ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EDC3FF751AD13664003E0631 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */,
+				924AFE0B1ABE14CD00A4E001 /* SettingsViewController.swift */,
+				EDC3FF761AD13695003E0631 /* LoginViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				924AFE0C1ABE14CD00A4E001 /* SecondViewController.swift in Sources */,
+				EDC3FF771AD13695003E0631 /* LoginViewController.swift in Sources */,
+				924AFE0C1ABE14CD00A4E001 /* SettingsViewController.swift in Sources */,
 				ED3C09D91ACFE2EB00778E68 /* DressComoPost.swift in Sources */,
+				EDC3FF711AD12EFB003E0631 /* User.swift in Sources */,
 				924AFE081ABE14CD00A4E001 /* AppDelegate.swift in Sources */,
 				ED3C09D71ACFE21D00778E68 /* PostTableViewCell.swift in Sources */,
 				ED7E4A001AD00FEA0041B899 /* NewsFeedTableViewController.swift in Sources */,
