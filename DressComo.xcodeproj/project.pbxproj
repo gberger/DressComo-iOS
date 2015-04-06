@@ -21,6 +21,7 @@
 		ED7E4A001AD00FEA0041B899 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */; };
 		EDC3FF711AD12EFB003E0631 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3FF701AD12EFB003E0631 /* User.swift */; };
 		EDC3FF771AD13695003E0631 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC3FF761AD13695003E0631 /* LoginViewController.swift */; };
+		EDD17C521AD32019003AD9C7 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD17C511AD32019003AD9C7 /* UIColorHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
 		EDC3FF701AD12EFB003E0631 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EDC3FF761AD13695003E0631 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EDD17C511AD32019003AD9C7 /* UIColorHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2300EF1AD25CD40002BAC6 /* Regex.swift */,
+				EDD17C511AD32019003AD9C7 /* UIColorHex.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				EDC3FF711AD12EFB003E0631 /* User.swift in Sources */,
 				924AFE081ABE14CD00A4E001 /* AppDelegate.swift in Sources */,
 				ED3C09D71ACFE21D00778E68 /* PostTableViewCell.swift in Sources */,
+				EDD17C521AD32019003AD9C7 /* UIColorHex.swift in Sources */,
 				ED7E4A001AD00FEA0041B899 /* NewsFeedTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,8 +16,17 @@ class NewsFeedTableViewController: UITableViewController {
     
     var posts : [DressComoPost] = []
     
+    @IBOutlet var rightGestureRecognizer: UISwipeGestureRecognizer!
+    @IBOutlet var leftGestureRecognizer: UISwipeGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bar = self.navigationController!.navigationBar
+        bar.barStyle = UIBarStyle.Black
+        bar.tintColor = UIColor(rgba: "#652c90")
+        bar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         let url = "http://localhost:3000/api/posts.json"
@@ -35,11 +44,7 @@ class NewsFeedTableViewController: UITableViewController {
                 if data != nil {
                     var json = JSON(data!)
                     for (index: String, postJson: SwiftyJSON.JSON) in json {
-                        var post = DressComoPost()
-                        post.id = Int(postJson["id"].double!)
-                        post.text = postJson["text"].stringValue
-                        post.cloudinary_image_id = postJson["cloudinary_image_id"].stringValue
-                        
+                        var post = DressComoPost(json: postJson)
                         self.posts.append(post)
                     }
                 }
@@ -70,6 +75,9 @@ class NewsFeedTableViewController: UITableViewController {
         
     }
     
+    @IBAction func rec(sender: AnyObject) {
+        println("right")
+    }
     
 }
 

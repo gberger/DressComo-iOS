@@ -13,6 +13,11 @@ class SettingsViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let bar = self.navigationController!.navigationBar
+        bar.barStyle = UIBarStyle.Black
+        bar.tintColor = UIColor(rgba: "#652c90")
+        bar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
 
     override func didReceiveMemoryWarning() {
