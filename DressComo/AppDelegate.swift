@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController
         } else {
             var ctrl = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
-            var navi = UINavigationController(rootViewController: ctrl)
-            self.window?.rootViewController = navi
+            self.window?.rootViewController = ctrl
         }
         
         return true

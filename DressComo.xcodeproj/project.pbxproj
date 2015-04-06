@@ -14,6 +14,7 @@
 		924AFE141ABE14CD00A4E001 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924AFE121ABE14CD00A4E001 /* LaunchScreen.xib */; };
 		924AFE201ABE14CE00A4E001 /* DressComoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924AFE1F1ABE14CE00A4E001 /* DressComoTests.swift */; };
 		D62CD7A7349CC53A0AB2A9EF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABCE8571DEBD39AB49D5C4E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		ED2300F01AD25CD40002BAC6 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2300EF1AD25CD40002BAC6 /* Regex.swift */; };
 		ED3C09D51ACFD86A00778E68 /* Haneke.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED3C09CD1ACFD83E00778E68 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED3C09D71ACFE21D00778E68 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */; };
 		ED3C09D91ACFE2EB00778E68 /* DressComoPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */; };
@@ -88,6 +89,7 @@
 		924AFE1E1ABE14CE00A4E001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924AFE1F1ABE14CE00A4E001 /* DressComoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressComoTests.swift; sourceTree = "<group>"; };
 		92ABD7FE1ABE1DD400892A92 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		ED2300EF1AD25CD40002BAC6 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		ED3C09C61ACFD83E00778E68 /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = Pods/../../HanekeSwift/Haneke.xcodeproj; sourceTree = "<group>"; };
 		ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		ED3C09D81ACFE2EB00778E68 /* DressComoPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DressComoPost.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		924AFE041ABE14CD00A4E001 /* DressComo */ = {
 			isa = PBXGroup;
 			children = (
+				ED2300EE1AD25CBD0002BAC6 /* Utils */,
 				EDC3FF741AD1365F003E0631 /* Models */,
 				EDC3FF751AD13664003E0631 /* ViewControllers */,
 				924AFE071ABE14CD00A4E001 /* AppDelegate.swift */,
@@ -191,6 +194,14 @@
 				2ABCE8571DEBD39AB49D5C4E /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED2300EE1AD25CBD0002BAC6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED2300EF1AD25CD40002BAC6 /* Regex.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		ED3C09C71ACFD83E00778E68 /* Products */ = {
@@ -407,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC3FF771AD13695003E0631 /* LoginViewController.swift in Sources */,
+				ED2300F01AD25CD40002BAC6 /* Regex.swift in Sources */,
 				924AFE0C1ABE14CD00A4E001 /* SettingsViewController.swift in Sources */,
 				ED3C09D91ACFE2EB00778E68 /* DressComoPost.swift in Sources */,
 				EDC3FF711AD12EFB003E0631 /* User.swift in Sources */,

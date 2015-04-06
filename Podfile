@@ -9,3 +9,5 @@ pod "Cloudinary", "~>1.0.1"
 pod "Locksmith"
 pod 'MBProgressHUD', '~> 0.9.1'
 
+
+pod 'SwiftValidator', '2.0.6'
