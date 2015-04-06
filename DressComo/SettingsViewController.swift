@@ -24,7 +24,7 @@ class SettingsViewController : UITableViewController {
         let logoutAlert = UIAlertController(title: "Logout", message: "Are you sure you want to logout?", preferredStyle: UIAlertControllerStyle.Alert)
         
         logoutAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
-            User.sharedInstance.eraseCredentials()
+            User.sharedInstance.erase()
             
             let delegate = UIApplication.sharedApplication().delegate as AppDelegate
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

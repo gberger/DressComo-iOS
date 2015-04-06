@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, ValidationDelegate {
         
         validator.registerField(emailField, rules: [RequiredRule(), EmailRule()])
         validator.registerField(passwordField, rules: [RequiredRule(), MinLengthRule(length: 6)])
-        validator.registerField(usernameField, rules: [RequiredRule(), MinLengthRule(length: 2)])
+        validator.registerField(usernameField, rules: [RequiredRule(), MinLengthRule(length: 2), MaxLengthRule(length: 20), RegexRule(regex: "^[a-zA-Z0-9_\\.]+$")])
         validator.registerField(nameField, rules: [MaxLengthRule(length: 128)])
         validator.registerField(locationField, rules: [MaxLengthRule(length: 128)])
         validator.registerField(bioField, rules: [MaxLengthRule(length: 512)])
@@ -59,29 +59,8 @@ class LoginViewController: UIViewController, ValidationDelegate {
         // Request
         let parameters = ["user": ["email": givenEmail, "password": givenPassword]]
         let url = "http://localhost:3000/users/sign_in.json"
-        Manager.sharedInstance.request(.POST, url, parameters: parameters)
-            .responseJSON { (request, response, data, error) in
-                
-                MBProgressHUD.hideHUDForView(self.view, animated: true)
-                
-                if response?.statusCode == 201 && data != nil {
-                    let json = JSON(data!)
-                    let user = User()
-                    let email = json["email"].stringValue as String
-                    let token = json["authentication_token"].stringValue as String
-                    User.sharedInstance.updateCredentials(email: email, token: token)
-                    
-                    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let ctrl = storyboard.instantiateViewControllerWithIdentifier("MainTabBarController") as UITabBarController
-                    delegate.window?.rootViewController = ctrl
-                    
-                } else {
-                    self.displayErrorAlert( "Wrong email/password")
-                    self.enableInputs()
-                }
-                
-        }
+
+        self.authenticate(url, parameters: parameters)
     }
     
     
@@ -124,30 +103,32 @@ class LoginViewController: UIViewController, ValidationDelegate {
             "bio": givenBio
         ]]
         
-//        let url = "http://localhost:3000/users/sign_up.json"
-//        Manager.sharedInstance.request(.POST, url, parameters: parameters)
-//            .responseJSON { (request, response, data, error) in
-//                
-//                MBProgressHUD.hideHUDForView(self.view, animated: true)
-//                
-//                if response?.statusCode == 201 && data != nil {
-//                    let json = JSON(data!)
-//                    let user = User()
-//                    let email = json["email"].stringValue as String
-//                    let token = json["authentication_token"].stringValue as String
-//                    User.sharedInstance.updateCredentials(email: email, token: token)
-//                    
-//                    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
-//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                    let ctrl = storyboard.instantiateViewControllerWithIdentifier("MainTabBarController") as UITabBarController
-//                    delegate.window?.rootViewController = ctrl
-//                    
-//                } else {
-//                    self.enableInputs()
-//                }
-//                
-//        }
+        let url = "http://localhost:3000/users.json"
+        
+        self.authenticate(url, parameters: parameters)
 
+    }
+    
+    private func authenticate(url: String, parameters: [String: AnyObject]) {
+        Manager.sharedInstance.request(.POST, url, parameters: parameters)
+            .responseJSON { (request, response, data, error) in
+                
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                
+                if response?.statusCode == 201 && data != nil {
+                    let json = JSON(data!)
+                    User.sharedInstance.update(json: json)
+                    
+                    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let ctrl = storyboard.instantiateViewControllerWithIdentifier("MainTabBarController") as UITabBarController
+                    delegate.window?.rootViewController = ctrl
+                    
+                } else {
+                    self.enableInputs()
+                }
+                
+        }
     }
     
     func validationFailed(errors: [UITextField: ValidationError]) {
@@ -239,5 +220,29 @@ class MaxLengthRule: Rule {
         return "Must be at most \(DEFAULT_MAX_LENGTH) characters long"
     }
 }
+
+
+class RegexRule : Rule {
+    
+    private var REGEX: String = "^(?=.*?[A-Z]).{8,}$"
+    
+    init(regex: String){
+        self.REGEX = regex
+    }
+    
+    func validate(value: String) -> Bool {
+        if let test = NSPredicate(format: "SELF MATCHES %@", self.REGEX) {
+            if test.evaluateWithObject(value) {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func errorMessage() -> String {
+        return "Invalid Regular Expression"
+    }
+}
+
 
 
