@@ -151,7 +151,6 @@
 				EDC3FF741AD1365F003E0631 /* Models */,
 				EDC3FF751AD13664003E0631 /* ViewControllers */,
 				924AFE071ABE14CD00A4E001 /* AppDelegate.swift */,
-				ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */,
 				924AFE0D1ABE14CD00A4E001 /* Main.storyboard */,
 				924AFE101ABE14CD00A4E001 /* Images.xcassets */,
 				924AFE121ABE14CD00A4E001 /* LaunchScreen.xib */,
@@ -219,6 +218,7 @@
 				ED7E49FF1AD00FEA0041B899 /* NewsFeedTableViewController.swift */,
 				924AFE0B1ABE14CD00A4E001 /* SettingsViewController.swift */,
 				EDC3FF761AD13695003E0631 /* LoginViewController.swift */,
+				ED3C09D61ACFE21D00778E68 /* PostTableViewCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

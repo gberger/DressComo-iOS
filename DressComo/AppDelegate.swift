@@ -23,7 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if User.sharedInstance.authenticated {
             self.window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController
         } else {
-            self.window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as? UIViewController
+            var ctrl = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
+            var navi = UINavigationController(rootViewController: ctrl)
+            self.window?.rootViewController = navi
         }
         
         return true

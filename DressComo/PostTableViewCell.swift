@@ -19,11 +19,21 @@ public class PostTableViewCell : UITableViewCell {
     @IBOutlet weak var dislikeLabel: UILabel!
     
     public func setPost(post: DressComoPost) {
-        var url : NSURL
-        url = post.image_url()
-        outfitImage!.hnk_setImageFromURL(url)
+        outfitImage!.hnk_setImageFromURL(post.image_url())
         descriptionLabel.text = post.text
         likeLabel.text = "\(post.likes)"
         dislikeLabel.text = "\(post.dislikes)"
+    }
+    
+    @IBAction func likeButtonPressed(sender: UIButton) {
+        
+    }
+    
+    @IBAction func dislikeButtonPressed(sender: UIButton) {
+        
+    }
+    
+    public func updatePost() {
+        
     }
 }

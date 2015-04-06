@@ -54,8 +54,10 @@ class LoginViewController: UIViewController {
                     let token = json["authentication_token"].stringValue as String
                     User.sharedInstance.updateCredentials(email: email, token: token)
                     
-                    let ctrl = self.storyboard?.instantiateViewControllerWithIdentifier("MainTabBarController") as UITabBarController
-                    self.navigationController?.pushViewController(ctrl, animated: true)
+                    let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let ctrl = storyboard.instantiateViewControllerWithIdentifier("MainTabBarController") as UITabBarController
+                    delegate.window?.rootViewController = ctrl
                     
                 } else {
                     
@@ -64,8 +66,6 @@ class LoginViewController: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                     
                     self.enableInputs()
-                    
-                    
                 }
                 
         }

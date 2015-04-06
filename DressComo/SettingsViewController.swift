@@ -26,8 +26,10 @@ class SettingsViewController : UITableViewController {
         logoutAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
             User.sharedInstance.eraseCredentials()
             
-            let ctrl = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
-            self.navigationController?.pushViewController(ctrl, animated: true)
+            let delegate = UIApplication.sharedApplication().delegate as AppDelegate
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let ctrl = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
+            delegate.window?.rootViewController = ctrl
         }))
         
         logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
